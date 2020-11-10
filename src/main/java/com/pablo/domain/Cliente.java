@@ -108,6 +108,14 @@ public class Cliente implements Serializable{
 	public void setTelefones(Set<String> telefones) {
 		this.telefones = telefones;
 	}
+	
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
 
 	public List<Pedido> getPedidos() {
 		return pedidos;
@@ -142,6 +150,10 @@ public class Cliente implements Serializable{
 		return true;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 	
 	
 

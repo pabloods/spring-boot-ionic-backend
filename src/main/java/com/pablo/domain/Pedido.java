@@ -4,7 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
+<<<<<<< HEAD
 import javax.persistence.Entity;
+=======
+>>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,26 +15,39 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+<<<<<<< HEAD
 @Entity
 public class Pedido implements Serializable{
+=======
+public class Pedido  implements Serializable{
+>>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private Date instante;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 	@OneToOne(cascade=CascadeType.ALL, mappedBy="pedido")
 	private Pagamento pagamento;
 	
 	@ManyToOne
 	@JoinColumn(name="cliente_id")
 	private Cliente cliente;
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 	@ManyToOne
 	@JoinColumn(name="endereco_de_entrega_id")
 	private Endereco enderecoDeEntrega;
 	
+<<<<<<< HEAD
 	public Pedido() {		
 	}
 
@@ -40,6 +56,16 @@ public class Pedido implements Serializable{
 		this.id = id;
 		this.instante = instante;
 		this.pagamento = pagamento;
+=======
+	public Pedido() {
+		
+	}
+
+	public Pedido(Integer id, Date instante, Cliente cliente, Endereco enderecoDeEntrega) {
+		super();
+		this.id = id;
+		this.instante = instante;		
+>>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 		this.cliente = cliente;
 		this.enderecoDeEntrega = enderecoDeEntrega;
 	}
@@ -110,5 +136,10 @@ public class Pedido implements Serializable{
 	}
 	
 	
+<<<<<<< HEAD
 
+=======
+	
+	
+>>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 }
