@@ -6,10 +6,7 @@ public enum EstadoPagamento {
 	QUITADO(2, "Quitado"),
 	CANCELADO(3, "Cancelado");
 
-<<<<<<< HEAD
-=======
-	
->>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
+
 	private int cod;
 	private String descricao;
 	
@@ -41,8 +38,5 @@ public enum EstadoPagamento {
 		throw new IllegalArgumentException("Id inválido: " + cod);
 		
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
+
 }

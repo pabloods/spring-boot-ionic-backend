@@ -14,23 +14,13 @@ import com.pablo.domain.enums.EstadoPagamento;
 
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
-<<<<<<< HEAD
-public class Pagamento implements Serializable{
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	private Integer id;
-	private EstadoPagamento estado;
-	
-=======
 public abstract class Pagamento implements Serializable{
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
 	private Integer id;
 	private Integer estado;
 
->>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 	@OneToOne
 	@JoinColumn(name="pedido_id")
 	@MapsId
@@ -43,11 +33,7 @@ public abstract class Pagamento implements Serializable{
 	public Pagamento(Integer id, EstadoPagamento estado, Pedido pedido) {
 		super();
 		this.id = id;
-<<<<<<< HEAD
-		this.estado = estado;
-=======
 		this.estado = estado.getCod();
->>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 		this.pedido = pedido;
 	}
 
@@ -60,21 +46,13 @@ public abstract class Pagamento implements Serializable{
 	}
 
 	public EstadoPagamento getEstado() {
-<<<<<<< HEAD
-		return estado;
-	}
-
-	public void setEstado(EstadoPagamento estado) {
-		this.estado = estado;
-=======
 		return EstadoPagamento.toEnum(estado);
 	}
 
 	public void setEstado(EstadoPagamento estado) {
 		this.estado = estado.getCod();
->>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
 	}
-
+	
 	public Pedido getPedido() {
 		return pedido;
 	}
@@ -110,8 +88,7 @@ public abstract class Pagamento implements Serializable{
 	
 	
 	
-<<<<<<< HEAD
+
 }
-=======
-	}
->>>>>>> 7801461731f7d644b014a588e9a2119419d161a3
+
+
