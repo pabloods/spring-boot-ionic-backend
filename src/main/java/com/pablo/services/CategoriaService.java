@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.pablo.domain.Categoria;
+import com.pablo.dto.CategoriaDTO;
 import com.pablo.repositories.CategoriaRepository;
 import com.pablo.services.exceptions.DataIntegrityException;
 import com.pablo.services.exceptions.ObjectNotFoundException;
@@ -57,6 +58,11 @@ public class CategoriaService {
 		PageRequest pageRequest = PageRequest.of(page, linesPerPage, org.springframework.data.domain.Sort.Direction.valueOf(direction), orderBy);
 		return repo.findAll(pageRequest); 		
 	}
+	
+	public Categoria fromDTO(CategoriaDTO objDTO) {
+		return new Categoria(objDTO.getId(), objDTO.getNome());
+	}
+	
 	
 	
 }
